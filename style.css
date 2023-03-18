@@ -13,3 +13,181 @@
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+:root {
+
+    --cyan: hsl(180, 66%, 49%);
+    --dark-violet: hsl(257, 27%, 26%);
+
+    /* Secondary */
+
+    --red: hsl(0, 87%, 67%);
+
+    /* Neutral */
+
+    --gray: hsl(0, 0%, 75%);
+    --grayish-Violet: hsl(257, 7%, 63%);
+    --very-dark-blue: hsl(255, 11%, 22%);
+    --very-dark-violet: hsl(260, 8%, 14%);
+}
+
+section {
+    padding: 2rem 7rem;
+    width: 100%;
+}
+
+
+header {
+    /* background-color: green; */
+    /* padding: 2rem 5rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav {
+    /* background-color: red; */
+    display: flex;
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+    flex: 30%;
+}
+
+.logo {
+    margin-right: 2rem;
+
+}
+
+nav ul {
+    /* background-color: navajowhite; */
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    /* background-color: blue; */
+    padding: 1.5rem;
+    font-size: 1.2rem;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--very-dark-violet);
+    font-weight: 700;
+}
+
+/* .btns {
+    background-color: aqua;
+    margin-left: 10rem;
+} */
+
+
+.login {
+    background-color: transparent;
+    border: none;
+    padding: 2rem;
+    padding: 0.6rem;
+    font-size: large;
+}
+
+.signup {
+    background-color: var(--cyan);
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 1.2rem;
+    color: white;
+    font-size: large;
+}
+
+/* home style */
+
+.home-container {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    width: 100%;
+}
+
+
+.home-container .home-text h1 {
+
+    font-size: 5rem;
+}
+
+.home-container .home-text p {
+    font-size: 2rem;
+    width: 85%;
+}
+
+.get-started {
+    padding: 0.7rem 3rem;
+    border: none;
+    outline: none;
+    border-radius: 1.2rem;
+    margin-top: 1.4rem;
+    font-size: large;
+    background-color: var(--cyan);
+    color: var(--very-dark-violet);
+
+}
+
+/* form style */
+
+
+form {
+    background-color: var(--dark-violet);
+    margin-top: 3rem;
+    padding: 2rem 4rem ;
+    border-radius: 0.6rem;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* flex: 80%; */
+    display: grid;
+    /* grid-template-areas: "input input input button"; */
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    gap: 1.0rem;
+
+}
+
+
+.input-wrap {
+    background-color: green;
+    /* grid-column: 1/4; */
+}
+
+/* .input-wrap  */
+input {
+    padding: 1rem;
+    /* width: 30rem; */
+    border-radius: 0.6rem;
+    border: none;
+    outline: none;
+    font-size: large;
+    /* grid-column:  1 /span 3; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* background-color: green; */
+    /* grid-area: "input"; */
+    /* grid-column: span 4; */
+}
+
+.input-wrap #err {
+    margin-top: 0.2rem;
+}
+
+
+form button {
+    background-color: var(--cyan);
+    border: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    font-size: large;
+    border-radius: 0.4rem;
+    grid-column: 4/5;
+    /* grid-area: "button"; */
+    /* margin-left: -7rem; */
+}
+
+/* home pages responsiveness */
