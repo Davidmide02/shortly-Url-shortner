@@ -7,6 +7,12 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- font cdn -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./style.css">
 
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
@@ -71,33 +77,36 @@
       </div>
 
       <!--form div  -->
-      <div class="form-container">
+      <div class="form-position">
 
-        <form action="">
+        <div class="form-container">
 
-
-          <!-- <div class="input-wrap"> -->
-
-            <input type="text" name="" id="input-text" placeholder=" Shorten a link here...">
-            <!-- <p id="err"></p> -->
-          <!-- </div> -->
+          <form action="">
 
 
-          <button type="submit">Shorten It!</button>
+            <div class="input-wrap">
 
-        </form>
+              <input type="text" id="input-text" placeholder=" Shorten a link here...">
+              <p id="err">please add a link</p>
+            </div>
 
-        <!-- shorten links display -->
 
-        <div class="display-link">
+            <button type="submit">Shorten It!</button>
+
+          </form>
+
+
+          <!-- shorten links display -->
+
+          <!-- <div class="display-link"> -->
 
           <div class="link-container">
 
-            <h3>link here</h3>
+            <h3 id="shortened-link">link here</h3>
             <div class="short-link-copy">
-              <h3>shortend link here</h3>
+              <input id="short-link" value="shortend link here" readonly></input>
               <button id="copy">Copy</button>
-              <i>delete icon here</i>
+              <i class="fa-solid fa-trash-can"></i>
             </div>
 
           </div>
@@ -105,9 +114,7 @@
 
         </div>
 
-
       </div>
-
 
       <!-- Advance Statistics -->
       <div class="advance">
@@ -118,9 +125,11 @@
           </p>
         </div>
 
-        <div class="advance-card">
 
-          <div class="advance-img">
+        <div class="advance-card">
+          <div class="line"></div>
+
+          <div class="advance-img card1">
             <img src="./images/icon-brand-recognition.svg" alt="img">
 
             <h4>Brand Recognition</h4>
@@ -129,25 +138,23 @@
               mean a thing. Branded links help instil confidence in your content.
             </p>
           </div>
+
           <!-- card 2 -->
 
-          <div class="advance-img">
+          <div class="advance-img card2">
             <img src="./images/icon-detailed-records.svg" alt="">
             <h4>Detailed Records</h4>
             <p>
               Gain insights into who is clicking your links. Knowing when and where. Knowing when and where
-              people engage with your content helps inform better decisions. people engage with your content helps
-              inform better decisions.
+              people engage with your content helps inform better decisions.
             </p>
 
           </div>
 
 
           <!-- card 3 -->
-          Gain insights into who is clicking your links. Knowing when and where
-          people engage with your content helps inform better decisions.
 
-          <div class="advance-img">
+          <div class="advance-img card3">
             <img src="./images/icon-fully-customizable.svg" alt="img">
             <h4> Fully Customizable</h4>
             <p>
@@ -182,7 +189,7 @@
       <!-- sub-footer div -->
       <div class="sub-footer">
         <div>
-          <img src="./images/logo.svg" alt="">
+          <img src="./images/footer logo.svg" alt="">
         </div>
 
 
@@ -259,28 +266,34 @@
         </div>
 
         <!-- social -->
-        <div>
-          <img src="./images/icon-facebook.svg" alt="img">
-          <img src="./images/icon-twitter.svg" alt="img">
-          <img src="./images/icon-pinterest.svg" alt="img">
-          <img src="./images/icon-instagram.svg" alt="img">
+        <div class="control">
+
+          <div>
+            <img src="./images/icon-facebook.svg" alt="img">
+            <img src="./images/icon-twitter.svg" alt="img">
+            <img src="./images/icon-pinterest.svg" alt="img">
+            <img src="./images/icon-instagram.svg" alt="img">
+
+          </div>
+
+          <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Davidnide</a>.
+          </div>
 
         </div>
 
 
-
       </div>
 
 
 
 
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
-      </div>
+
 
 
     </footer>
+
 
 
 
