@@ -74,9 +74,15 @@ nav ul li {
 
 nav ul a {
     text-decoration: none;
-    color: var(--very-dark-violet);
+    color: var(--grayish-Violet);
     font-weight: 700;
 }
+
+nav ul a:hover {
+    color: var(--dark-violet);
+    transition: 0.8s;
+}
+
 
 .btns {
 
@@ -103,6 +109,13 @@ nav ul a {
     color: white;
     font-size: 1.0rem;
     font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.signup:hover {
+    background-color: hsl(180, 60%, 44%);
+    transition: 0.8s;
 }
 
 /* home style */
@@ -136,6 +149,12 @@ nav ul a {
     background-color: var(--cyan);
     color: white;
     font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.get-started:hover {
+    background-color: hsl(180, 60%, 44%);
+    transition: 0.8s;
 }
 
 /* form style */
@@ -189,6 +208,12 @@ form {
     color: var(--red);
 }
 
+/* copied indicator */
+.copied {
+    background-color: var(--dark-violet);
+    transition: 0.8s;
+}
+
 #err {
     /* background-color: yellow; */
     position: absolute;
@@ -225,8 +250,14 @@ form button {
     border-radius: 0.4rem;
     grid-column: 4/5;
     color: var(--very-dark-violet);
+    cursor: pointer;
 
 
+}
+
+form button:hover {
+    background-color: hsl(180, 60%, 44%);
+    transition: 0.8s;
 }
 
 
@@ -270,10 +301,22 @@ form button {
     border: none;
     outline: none;
     border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.link-container .short-link-copy button:hover {
+    background-color: hsl(180, 60%, 44%);
+    transition: 0.8s;
 }
 
 .fa-solid {
     margin-left: 1rem;
+    cursor: pointer;
+}
+
+.fa-solid:hover {
+    color: var(--red);
+    transition: 0.8s;
 }
 
 
@@ -403,4 +446,20 @@ footer ul {
 footer ul li {
     margin-bottom: 1rem;
     margin-top: 0.4rem;
+    cursor: pointer;
+}
+
+footer ul li:hover {
+    color: var(--cyan);
+    transition: 0.8s;
+}
+
+
+
+.control .social img:hover {
+     background-color: var(--cyan);
+     transition: 0.8s;
+     cursor: pointer;
+     border-radius: 50%;
+     
 }
