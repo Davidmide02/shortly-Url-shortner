@@ -249,7 +249,7 @@ form button {
     font-size: large;
     border-radius: 0.4rem;
     grid-column: 4/5;
-    color: var(--very-dark-violet);
+    color: white;
     cursor: pointer;
 
 
