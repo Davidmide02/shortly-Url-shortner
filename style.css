@@ -126,6 +126,7 @@ nav ul a:hover {
     padding-top: 2rem;
     justify-content: space-between;
     padding: 2rem 0rem 0rem 7rem;
+    border: 2px solid green;
 }
 
 
@@ -159,34 +160,46 @@ nav ul a:hover {
 
 /* form style */
 
-.form-position {
+/* .form-position {
     position: relative;
     padding-top: 4rem;
     margin-top: 4rem;
     z-index: 1;
 
-}
+} */
 
 .form-container {
 
-    padding-right: 7rem;
+    /* padding-right: 7rem;
     padding-left: 7rem;
     position: absolute;
     margin-bottom: -4rem;
     width: 100%;
-    bottom: -14rem;
+    bottom: -14rem; */
+    position: relative;
+    margin-top: 3rem;
+    padding: 2rem 7rem;
+    /* padding-top: 10rem; */
+    border: 3px solid green;
+    display: flex;
+    justify-content: center;
+    /* padding-top: 4rem; */
+    /* margin-top: 4rem; */
+    /* z-index: 1; */
 }
 
 form {
     background-color: var(--dark-violet);
     background-image: url(./images/bg-shorten-desktop.svg);
     background-size: cover;
-    padding: 4.9rem 4rem;
+    padding: 3rem 2rem;
     border-radius: 0.6rem;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
     gap: 1.0rem;
-    position: relative;
+    position: absolute;
+    width: 80%;
+    bottom: -17.5rem;
 }
 
 
@@ -217,7 +230,7 @@ form {
 #err {
     /* background-color: yellow; */
     position: absolute;
-    bottom: 2.5rem;
+    bottom: 0.7rem;
     font-size: 1.3rem;
     color: var(--red);
     font-style: italic;
@@ -261,6 +274,13 @@ form button:hover {
 }
 
 
+.link-dispaly {
+    /* background-color: green; */
+    padding-top: 14rem;
+    margin-top: 5rem;
+    background-color: var(--gray);
+
+}
 .link-container {
     background-color: white;
     margin-top: 1rem;
@@ -270,17 +290,20 @@ form button:hover {
     align-items: center;
     justify-content: space-between;
     font-size: 1.7rem;
+    border: 2px solid green;
 }
 
 .link-container #shortened-link {
 
     color: var(--dark-violet);
+    /* background-color: greenyellow; */
+    /* padding: 4rem; */
 
 }
 
 .link-container .short-link-copy {
 
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -290,12 +313,12 @@ form button:hover {
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
 }
 
 .link-container .short-link-copy button {
     padding: 0.7rem 1.5rem;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     background-color: var(--cyan);
     color: white;
     border: none;
@@ -457,9 +480,9 @@ footer ul li:hover {
 
 
 .control .social img:hover {
-     background-color: var(--cyan);
-     transition: 0.8s;
-     cursor: pointer;
-     border-radius: 50%;
-     
+    background-color: var(--cyan);
+    transition: 0.8s;
+    cursor: pointer;
+    border-radius: 50%;
+
 }
