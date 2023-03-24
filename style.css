@@ -118,6 +118,11 @@ nav ul a:hover {
     transition: 0.8s;
 }
 
+#menu-icon {
+    display: none;
+    width: 15%;
+}
+
 /* home style */
 
 .home-container {
@@ -126,7 +131,6 @@ nav ul a:hover {
     padding-top: 2rem;
     justify-content: space-between;
     padding: 2rem 0rem 0rem 7rem;
-    border: 2px solid green;
 }
 
 
@@ -160,32 +164,14 @@ nav ul a:hover {
 
 /* form style */
 
-/* .form-position {
-    position: relative;
-    padding-top: 4rem;
-    margin-top: 4rem;
-    z-index: 1;
-
-} */
 
 .form-container {
-
-    /* padding-right: 7rem;
-    padding-left: 7rem;
-    position: absolute;
-    margin-bottom: -4rem;
-    width: 100%;
-    bottom: -14rem; */
     position: relative;
     margin-top: 3rem;
     padding: 2rem 7rem;
-    /* padding-top: 10rem; */
-    border: 3px solid green;
     display: flex;
     justify-content: center;
-    /* padding-top: 4rem; */
-    /* margin-top: 4rem; */
-    /* z-index: 1; */
+
 }
 
 form {
@@ -195,11 +181,11 @@ form {
     padding: 3rem 2rem;
     border-radius: 0.6rem;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-columns: repeat(4, 2fr);
     gap: 1.0rem;
     position: absolute;
-    width: 80%;
-    bottom: -17.5rem;
+    width: 88%;
+    bottom: -10rem;
 }
 
 
@@ -208,7 +194,8 @@ form {
 .input-wrap {
     grid-column: 1/4;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-columns: repeat(4, 2fr);
+
 }
 
 /* add with javaScript */
@@ -223,12 +210,12 @@ form {
 
 /* copied indicator */
 .copied {
-    background-color: var(--dark-violet);
+    background-color: var(--dark-violet) important!;
+    color: yellow;
     transition: 0.8s;
 }
 
 #err {
-    /* background-color: yellow; */
     position: absolute;
     bottom: 0.7rem;
     font-size: 1.3rem;
@@ -274,30 +261,30 @@ form button:hover {
 }
 
 
-.link-dispaly {
-    /* background-color: green; */
-    padding-top: 14rem;
+.link-display {
+    padding-top: 4rem;
     margin-top: 5rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
     background-color: var(--gray);
 
 }
+
 .link-container {
     background-color: white;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border-radius: 0.9rem;
     padding: 0.7rem 5rem 0.7rem 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1.7rem;
-    border: 2px solid green;
 }
 
 .link-container #shortened-link {
 
     color: var(--dark-violet);
-    /* background-color: greenyellow; */
-    /* padding: 4rem; */
+    font-size: 1.2rem;
 
 }
 
@@ -332,13 +319,15 @@ form button:hover {
     transition: 0.8s;
 }
 
-.fa-solid {
+.fa-solid-can {
     margin-left: 1rem;
     cursor: pointer;
+    width: 5%;
 }
 
-.fa-solid:hover {
-    color: var(--red);
+.fa-solid-can:hover {
+    background-color: var(--red);
+    border-radius: 0.3rem;
     transition: 0.8s;
 }
 
@@ -346,15 +335,14 @@ form button:hover {
 
 .advance {
     background-color: var(--gray);
-    margin-top: 7rem;
-    padding-top: 20rem;
+    padding-top: 5rem;
     padding-left: 7rem;
     padding-right: 7rem;
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
 }
 
 .advance .text {
-    width: 28%;
+    width: 40%;
     margin: 2rem auto;
     text-align: center;
     color: var(--very-dark-violet);
@@ -484,5 +472,45 @@ footer ul li:hover {
     transition: 0.8s;
     cursor: pointer;
     border-radius: 50%;
+
+}
+
+
+/* reponsiveness */
+
+@media only screen and (max-width:820px) {
+    body {
+        background-color: green;
+        width: 80%;
+    }
+
+    section {
+        /* width: 100%; */
+        background-color: var(--gray)
+    }
+    nav {
+        display: none;
+    }
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    #menu-icon:hover {
+        border-bottom: 6px solid var(--cyan);
+
+    }
+
+    .home-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .home-img {
+        width: 30%;
+        padding: 1rem;
+    }
+
+
+
 
 }

@@ -1,23 +1,15 @@
 // https://api.shrtco.de/v2/shorten?url=example.org/very/long/link.html
 
-// alert("hello world")
 
 const apiBaseUrl = "https://api.shrtco.de/";
 let apiversion = "v2/"
 
 const form = document.querySelector("#form");
-// const linkContainer = document.querySelector(".link-container");
-// const copyBtn = document.querySelector("#copy");
 let errM = document.querySelector("#err");
 const inputText = document.querySelector("#input-text");
-// const linkCome = document.querySelector(".come");
 
-console.log(form);
-// console.log(linkContainer);
-console.log(errM);
-// console.log(copyBtn);
-console.log(inputText);
 
+// form submition form
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     shortLink(inputText.value)
@@ -44,12 +36,10 @@ function shortLink(link) {
             .then(data => {
                 inputText.classList.remove("err-indicator");
                 errM.textContent = "";
-                console.log(data)
-                // mainLinkEl.textContent = `${data.result.original_link}`;
-                // document.querySelector("#short-link").value = `${data.result.full_short_link2}`
-                // creating pre-styled elements
-                const formContainer = document.querySelector(".form-container");
-                const linkContainer = document.createElement("div")
+
+                // creating and appending elements
+                const linkDisplayParent = document.querySelector(".link-display");
+                const linkContainer = document.createElement("div");
                 linkContainer.classList.add("link-container");
 
                 const mainLinkEl = document.createElement("h3");
@@ -61,7 +51,6 @@ function shortLink(link) {
 
                 const shortLinkEl = document.createElement("input");
 
-                // shortLinkEl.type("text");
                 shortLinkEl.value = `${data.result.full_short_link2}`;
                 shortLinkEl.setAttribute("type", "text");
                 shortLinkEl.setAttribute("id", "short-link");
@@ -71,22 +60,44 @@ function shortLink(link) {
                 copyBtn.setAttribute("id", "copy");
                 copyBtn.textContent = "Copy";
 
+                const deleteIcon = document.createElement("img");
+                deleteIcon.src = "./images/trash-can-regular.svg"
+                deleteIcon.classList.add("fa-solid-can")
+
                 shortLinkContainer.appendChild(shortLinkEl);
                 shortLinkContainer.appendChild(copyBtn);
+                shortLinkContainer.appendChild(deleteIcon);
 
                 linkContainer.appendChild(mainLinkEl);
                 linkContainer.appendChild(shortLinkContainer);
 
-                formContainer.appendChild(linkContainer);
-                
+                linkDisplayParent.appendChild(linkContainer);
 
-               
+                copyBtn.addEventListener("click", ()=> {
+
+                    shortLinkEl.select();
+                    document.execCommand("copy");
+                    copyBtn.classList.add("copied");
+                    copyBtn.setAttribute("background-color", "green");
+                    copyBtn.textContent = "copied";
+
+                    
+                    
+                    
+                })
+
+                // delete function
+                deleteIcon.addEventListener("click", ()=> {
+
+                    linkDisplayParent.removeChild(linkContainer)
+                })
+        
 
 
             }
+
             )
 
     }
 
 }
-
