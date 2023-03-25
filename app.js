@@ -7,6 +7,9 @@ let apiversion = "v2/"
 const form = document.querySelector("#form");
 let errM = document.querySelector("#err");
 const inputText = document.querySelector("#input-text");
+const menuIcon = document.querySelector(".menu-icon");
+const menuClose = document.querySelector(".menu-close");
+
 
 
 // form submition form
@@ -15,6 +18,8 @@ form.addEventListener("submit", (e) => {
     shortLink(inputText.value)
 }
 )
+
+
 
 function shortLink(link) {
 
@@ -54,7 +59,7 @@ function shortLink(link) {
                 shortLinkEl.value = `${data.result.full_short_link2}`;
                 shortLinkEl.setAttribute("type", "text");
                 shortLinkEl.setAttribute("id", "short-link");
-                shortLinkEl.setAttribute("readonly","readonly")
+                shortLinkEl.setAttribute("readonly", "readonly")
 
                 const copyBtn = document.createElement("button");
                 copyBtn.setAttribute("id", "copy");
@@ -68,12 +73,17 @@ function shortLink(link) {
                 shortLinkContainer.appendChild(copyBtn);
                 shortLinkContainer.appendChild(deleteIcon);
 
+                // line on mobile view div
+                const line = document.createElement("div");
+                line.classList.add("lineform");
+
                 linkContainer.appendChild(mainLinkEl);
+                linkContainer.appendChild(line);
                 linkContainer.appendChild(shortLinkContainer);
 
                 linkDisplayParent.appendChild(linkContainer);
 
-                copyBtn.addEventListener("click", ()=> {
+                copyBtn.addEventListener("click", () => {
 
                     shortLinkEl.select();
                     document.execCommand("copy");
@@ -81,17 +91,17 @@ function shortLink(link) {
                     copyBtn.setAttribute("background-color", "green");
                     copyBtn.textContent = "copied";
 
-                    
-                    
-                    
+
+
+
                 })
 
                 // delete function
-                deleteIcon.addEventListener("click", ()=> {
+                deleteIcon.addEventListener("click", () => {
 
                     linkDisplayParent.removeChild(linkContainer)
                 })
-        
+
 
 
             }
@@ -101,3 +111,32 @@ function shortLink(link) {
     }
 
 }
+
+// opem menu
+
+menuIcon.addEventListener("click", () => {
+    const menu = document.querySelector(".nav");
+    console.log(menu);
+    menu.classList.add("open");
+    menuClose.classList.add("open2");
+    //    menuIcon.setAttribute("id", "close")
+    menuIcon.classList.add("close");
+
+
+}
+
+)
+
+
+// close menu
+menuClose.addEventListener("click", () => {
+    const menu = document.querySelector(".nav");
+    console.log(menu);
+    menu.classList.remove("open");
+    menuClose.classList.remove("open2");
+    menuIcon.classList.remove("close");
+
+
+}
+
+)
