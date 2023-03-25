@@ -14,7 +14,7 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 
 ## Overview
@@ -41,7 +41,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [ Solution URL here](https://github.com/Davidmide02/shortly-Url-shortner.git)
-- Live Site URL: [ Live site URL here](https://your-live-site-url.com)
+- Live Site URL: [ Live site URL here](https://davidmide02-url-shortener.netlify.app/)
 
 ## My process
 - Study the design
