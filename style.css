@@ -48,7 +48,7 @@ header {
 
 }
 
-nav {
+.nav {
 
     display: flex;
     justify-content: space-between;
@@ -61,24 +61,24 @@ nav {
 
 }
 
-nav ul {
+.nav ul {
 
     list-style: none;
     display: flex;
 }
 
-nav ul li {
+.nav ul li {
     padding: 1.5rem;
     font-size: 1.2rem;
 }
 
-nav ul a {
+.nav ul a {
     text-decoration: none;
     color: var(--grayish-Violet);
     font-weight: 700;
 }
 
-nav ul a:hover {
+.nav ul a:hover {
     color: var(--dark-violet);
     transition: 0.8s;
 }
@@ -101,6 +101,13 @@ nav ul a:hover {
     font-family: 'Poppins', sans-serif;
 }
 
+.login:hover {
+    border-radius: 0.5rem;
+    border: 2px solid var(--cyan);
+}
+
+
+
 .signup {
     background-color: var(--cyan);
     padding: 0.6rem 1.2rem;
@@ -118,9 +125,10 @@ nav ul a:hover {
     transition: 0.8s;
 }
 
-#menu-icon {
+.menu-icon,
+.menu-close {
     display: none;
-    width: 15%;
+    width: 10%;
 }
 
 /* home style */
@@ -210,7 +218,7 @@ form {
 
 /* copied indicator */
 .copied {
-    background-color: var(--dark-violet) important!;
+    background-color: var(--dark-violet) important !;
     color: yellow;
     transition: 0.8s;
 }
@@ -301,7 +309,14 @@ form button:hover {
     border: none;
     outline: none;
     font-size: 1.2rem;
+    color: var(--cyan);
 }
+
+.lineform {
+    display: none;
+}
+
+
 
 .link-container .short-link-copy button {
     padding: 0.7rem 1.5rem;
@@ -322,7 +337,8 @@ form button:hover {
 .fa-solid-can {
     margin-left: 1rem;
     cursor: pointer;
-    width: 5%;
+    width: 7%;
+    padding: 0.5rem;
 }
 
 .fa-solid-can:hover {
@@ -423,10 +439,10 @@ form button:hover {
     margin-bottom: 2rem;
 }
 
-footer {
+/* footer {
     flex-direction: column;
     align-items: center;
-}
+} */
 
 footer .boost {
 
@@ -480,35 +496,317 @@ footer ul li:hover {
 
 @media only screen and (max-width:820px) {
     body {
-        background-color: green;
-        width: 80%;
+        overflow-x: hidden;
+
     }
 
     section {
-        /* width: 100%; */
-        background-color: var(--gray)
-    }
-    nav {
-        display: none;
-    }
-    #menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-    #menu-icon:hover {
-        border-bottom: 6px solid var(--cyan);
+
+        background-color: var(--gray);
 
     }
+
+    header {
+        padding: 2rem;
+    }
+
+
+
+
 
     .home-container {
         flex-direction: column-reverse;
         justify-content: center;
+        padding: 0.5rem 0rem 0rem 2rem;
+        overflow-x: hidden;
     }
 
-    .home-img {
-        width: 30%;
-        padding: 1rem;
+
+    .home-text {
+        text-align: center;
     }
+
+
+    .home-container .home-text h1 {
+        font-size: 3rem;
+    }
+
+    .home-container .home-text p {
+        width: 100%;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+
+    }
+
+
+    .input-wrap {
+        grid-column: span 4;
+    }
+
+    form {
+        padding: 2rem;
+    }
+
+    #err {
+        bottom: 6rem;
+    }
+
+
+
+    form button {
+        grid-column: 1/5;
+        margin-top: 1.5rem;
+    }
+
+    .link-display {
+        padding: 1rem;
+        padding-top: 4rem;
+    }
+
+
+    .link-container {
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .link-container h3 {
+
+        color-scheme: var(--gray);
+    }
+
+    .link-container .short-link-copy {
+
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    .link-container .short-link-copy input {
+        text-align: center;
+
+    }
+
+    .lineform {
+        display: block;
+        padding: 0.12rem;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: var(--gray);
+    }
+
+    .link-container .short-link-copy button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .fa-solid-can {
+        width: 10%;
+        padding: 0.5rem;
+    }
+
+    .advance {
+        padding: 2rem;
+    }
+
+    .advance .text {
+        width: 100%;
+    }
+
+    .advance-card {
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .advance-img {
+        width: 100%;
+    }
+
+    .line {
+        height: 70vh;
+        width: 2%;
+    }
+
+
+    .advance-card .card1 {
+
+        margin-bottom: 5rem;
+
+    }
+
+    .advance-card .card2 {
+
+        margin: 0;
+        margin-bottom: 5rem;
+
+    }
+
+    .advance-card .card3 {
+        margin: 0;
+    }
+
+    footer .boost {
+        font-size: 1.6rem;
+    }
+
+
+    footer .sub-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    /*.menu functionality */
+
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-icon:hover,
+    .menu-close:hover {
+        border: 6px solid var(--cyan);
+
+    }
+
+    .menu-close {
+        display: none;
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        transform: translate(-50%, -50%);
+        width: 8%;
+        animation: close 2s linear;
+    }
+
+    @keyframes close {
+        0% {
+            top: 0%;
+            right: 0%;
+            transform: translate(-50%, -50%);
+        }
+
+        100% {
+            top: 30%;
+            right: 10%;
+            transform: translate(-50%, -50%);
+        }
+
+
+    }
+
+    /* to close meu */
+    .close {
+        display: none;
+    }
+
+    /* to open menu */
+    .open2 {
+        display: block;
+    }
+
+
+
+
+    .nav {
+        display: none;
+        /* background-color: green; */
+        /* flex-direction: column; */
+
+    }
+
+    .nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .nav ul a {
+        color: white;
+    }
+
+    .nav ul a:hover {
+        color: var(--grayish-Violet);
+    }
+
+    .btns {
+        flex-direction: column;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        /* color: white; */
+        /* font-size: 5.2rem; */
+    }
+
+    .login {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .signup {
+        width: 90%;
+    }
+
+
+
+    .open {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* bottom: 50%; */
+        transform: translate(-50%, -50%);
+        background-color: var(--dark-violet);
+        width: 80%;
+        /* height: 30vh; */
+        border-radius: 1.0rem;
+        animation: menu 2s linear;
+    }
+
+    @keyframes menu {
+
+        0% {
+            top: 0%;
+            left: 0%;
+            /* transform: translate(0%, 0%); */
+            /* background-color: red; */
+        }
+
+        100% {
+            top: 50%;
+            left: 50%;
+            /* background-color: green; */
+            /* transform: translate(-50%, -50%); */
+        }
+
+        /* form {
+            top: 0%;
+            left: 0%;
+            transform: translate(0%, 0%);
+            background-color: red;
+        } */
+
+
+
+        /* to {
+            top: 50%;
+            left: 50%;
+            background-color: green;
+            transform: translate(-50%, -50%);
+        } */
+
+    }
+
+
+
+
+
+
 
 
 
