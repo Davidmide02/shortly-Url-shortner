@@ -116,7 +116,7 @@ function shortLink(link) {
 
 menuIcon.addEventListener("click", () => {
     const menu = document.querySelector(".nav");
-    console.log(menu);
+    // console.log(menu);
     menu.classList.add("open");
     menuClose.classList.add("open2");
     //    menuIcon.setAttribute("id", "close")
@@ -131,11 +131,10 @@ menuIcon.addEventListener("click", () => {
 // close menu
 menuClose.addEventListener("click", () => {
     const menu = document.querySelector(".nav");
-    console.log(menu);
+    // console.log(menu);
     menu.classList.remove("open");
     menuClose.classList.remove("open2");
     menuIcon.classList.remove("close");
-
 
 }
 
