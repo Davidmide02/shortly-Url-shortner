@@ -675,7 +675,7 @@ footer ul li:hover {
     .menu-close {
         display: none;
         position: absolute;
-        top: 30%;
+        top: 20%;
         right: 10%;
         transform: translate(-50%, -50%);
         width: 8%;
@@ -690,7 +690,7 @@ footer ul li:hover {
         }
 
         100% {
-            top: 30%;
+            top: 20%;
             right: 10%;
             transform: translate(-50%, -50%);
         }
@@ -713,8 +713,6 @@ footer ul li:hover {
 
     .nav {
         display: none;
-        /* background-color: green; */
-        /* flex-direction: column; */
 
     }
 
@@ -759,11 +757,9 @@ footer ul li:hover {
         position: absolute;
         top: 50%;
         left: 50%;
-        /* bottom: 50%; */
         transform: translate(-50%, -50%);
         background-color: var(--dark-violet);
         width: 80%;
-        /* height: 30vh; */
         border-radius: 1.0rem;
         animation: menu 2s linear;
     }
@@ -773,32 +769,12 @@ footer ul li:hover {
         0% {
             top: 0%;
             left: 0%;
-            /* transform: translate(0%, 0%); */
-            /* background-color: red; */
         }
 
         100% {
             top: 50%;
             left: 50%;
-            /* background-color: green; */
-            /* transform: translate(-50%, -50%); */
         }
-
-        /* form {
-            top: 0%;
-            left: 0%;
-            transform: translate(0%, 0%);
-            background-color: red;
-        } */
-
-
-
-        /* to {
-            top: 50%;
-            left: 50%;
-            background-color: green;
-            transform: translate(-50%, -50%);
-        } */
 
     }
 
